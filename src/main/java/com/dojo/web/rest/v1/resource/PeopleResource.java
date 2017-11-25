@@ -1,4 +1,4 @@
-package com.ciandt.module.web.rest.v1.resource;
+package com.dojo.web.rest.v1.resource;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,7 +1,7 @@
-package com.ciandt.module.web.rest.v1.controller;
+package com.dojo.web.rest.v1.controller;
 
-import com.ciandt.module.utils.PeopleUtils;
-import com.ciandt.module.web.rest.v1.resource.PeopleResource;
+import com.dojo.utils.PeopleUtils;
+import com.dojo.web.rest.v1.resource.PeopleResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

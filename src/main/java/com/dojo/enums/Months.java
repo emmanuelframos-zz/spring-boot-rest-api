@@ -1,4 +1,4 @@
-package com.ciandt.module.enums;
+package com.dojo.enums;
 
 public enum Months {
     SEP,

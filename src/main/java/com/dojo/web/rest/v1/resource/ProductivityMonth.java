@@ -1,6 +1,6 @@
-package com.ciandt.module.web.rest.v1.resource;
+package com.dojo.web.rest.v1.resource;
 
-import com.ciandt.module.enums.Months;
+import com.dojo.enums.Months;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 

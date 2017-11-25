@@ -1,7 +1,7 @@
-package com.ciandt.module.utils;
+package com.dojo.utils;
 
-import com.ciandt.module.enums.Months;
-import com.ciandt.module.web.rest.v1.resource.ProductivityMonth;
+import com.dojo.enums.Months;
+import com.dojo.web.rest.v1.resource.ProductivityMonth;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.ciandt.module.filter;
+package com.dojo.filter;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
