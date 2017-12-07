@@ -1,37 +1,42 @@
 package com.dojo.web.rest.v1.resource;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PeopleResource {
 
-    @JsonProperty
+    @Setter(AccessLevel.NONE)
     private String login;
 
-    @JsonProperty
+    @Setter(AccessLevel.NONE)
     private String name;
 
-    @JsonProperty
+    @Setter(AccessLevel.NONE)
     private Integer age;
 
-    @JsonProperty
+    @Setter(AccessLevel.NONE)
     private String birthDate;
 
-    @JsonProperty
+    @Setter(AccessLevel.NONE)
     private String photoUrl;
 
-    @JsonProperty
+    @Setter(AccessLevel.NONE)
     private Double salary;
 
-    @JsonProperty
+    @Setter(AccessLevel.NONE)
     private List<ProductivityMonth> productivityMonths = new ArrayList<>();
 
-    @JsonProperty
+    @Setter(AccessLevel.NONE)
     private Double productivityAverage;
 
-    @JsonProperty
+    @Setter(AccessLevel.NONE)
     private String prize;
 
     private PeopleResource(){ }

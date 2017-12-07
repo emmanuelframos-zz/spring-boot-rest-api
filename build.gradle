@@ -1,40 +1,29 @@
-buildscript {
-    ext {
-        springBootVersion = '1.4.1.RELEASE'
-    }
-    repositories {
-        mavenCentral()
-        jcenter()
-    }
-    dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
-    }
-}
-
-apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: 'eclipse'
-apply plugin: 'spring-boot'
+apply plugin: "java"
+apply plugin: "org.springframework.boot"
 
 repositories {
     mavenCentral()
-    jcenter()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE"
+    }
 }
 
 jar {
-    baseName = 'dojo-angular-api'
+    baseName = "dojo-angular-api"
 }
 
 dependencies {
 
-    /** Spring Boot Starter */
-    def springBootVersion = '1.4.1.RELEASE'
+    def springBootVersion = '1.5.9.RELEASE'
     compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
     compile("org.springframework.boot:spring-boot-starter-jetty:${springBootVersion}"){
         exclude group: 'org.eclipse.jetty.websocket'
     }
-    compile "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}"
-
     compile 'org.projectlombok:lombok:1.16.10'
-    
 }

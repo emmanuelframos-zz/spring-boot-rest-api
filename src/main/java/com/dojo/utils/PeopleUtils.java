@@ -1,4 +1,4 @@
-package com.ciandt.module.utils;
+package com.dojo.utils;
 
 import com.dojo.web.rest.v1.resource.PeopleResource;
 
