@@ -1,7 +1,7 @@
-package com.dojo.web.rest.v1.controller;
+package com.api.web.rest.v1.controller;
 
-import com.dojo.utils.PeopleUtils;
-import com.dojo.web.rest.v1.resource.PeopleResource;
+import com.api.utils.PeopleUtils;
+import com.api.web.rest.v1.resource.PeopleResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;

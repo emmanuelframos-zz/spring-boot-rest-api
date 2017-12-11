@@ -1,4 +1,4 @@
-package com.dojo.filter;
+package com.api.filter;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;

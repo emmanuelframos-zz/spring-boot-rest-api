@@ -1,7 +1,7 @@
-package com.dojo.utils;
+package com.api.utils;
 
-import com.dojo.enums.Months;
-import com.dojo.web.rest.v1.resource.ProductivityMonth;
+import com.api.enums.Months;
+import com.api.web.rest.v1.resource.ProductivityMonth;
 
 import java.util.ArrayList;
 import java.util.List;

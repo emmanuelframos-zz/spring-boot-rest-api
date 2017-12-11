@@ -1,6 +1,6 @@
-package com.dojo.utils;
+package com.api.utils;
 
-import com.dojo.web.rest.v1.resource.PeopleResource;
+import com.api.web.rest.v1.resource.PeopleResource;
 
 import java.util.ArrayList;
 import java.util.List;

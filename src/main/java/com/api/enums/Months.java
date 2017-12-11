@@ -1,4 +1,4 @@
-package com.dojo.enums;
+package com.api.enums;
 
 public enum Months {
     SEP,

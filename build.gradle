@@ -15,7 +15,7 @@ buildscript {
 }
 
 jar {
-    baseName = "dojo-angular-api"
+    baseName = "spring-boot-rest-api"
 }
 
 dependencies {

@@ -1,4 +1,4 @@
-package com.dojo.web.rest.v1.resource;
+package com.api.web.rest.v1.resource;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AccessLevel;
