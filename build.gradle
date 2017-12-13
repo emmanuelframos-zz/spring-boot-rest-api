@@ -22,8 +22,7 @@ dependencies {
 
     def springBootVersion = '1.5.9.RELEASE'
     compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
-    compile("org.springframework.boot:spring-boot-starter-jetty:${springBootVersion}"){
-        exclude group: 'org.eclipse.jetty.websocket'
-    }
+    compile("org.springframework.boot:spring-boot-starter-undertow:${springBootVersion}")
+
     compile 'org.projectlombok:lombok:1.16.10'
 }
