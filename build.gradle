@@ -20,9 +20,29 @@ jar {
 
 dependencies {
 
+    /** Spring Boot Stack **/
     def springBootVersion = '1.5.9.RELEASE'
     compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
-    compile("org.springframework.boot:spring-boot-starter-undertow:${springBootVersion}")
+    compile ("org.springframework.boot:spring-boot-starter-undertow:${springBootVersion}"){
+        exclude group: 'io.undertow', module: 'undertow-websockets-jsr'
+    }
+    compile ("org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"){
+        exclude module: 'tomcat-jdbc'
+    }
+    compile "org.springframework.boot:spring-boot-starter-logging:${springBootVersion}"
 
-    compile 'org.projectlombok:lombok:1.16.10'
+    /** Swagger **/
+    compile "io.springfox:springfox-swagger2:2.6.1"
+    compile "io.springfox:springfox-swagger-ui:2.6.1"
+
+    /** Database **/
+    compile "com.h2database:h2:1.4.196"
+
+    /** Utils **/
+    compile "org.projectlombok:lombok:1.16.10"
+    compile "org.apache.commons:commons-lang3:3.5"
+
+    /** Tests **/
+    testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+
 }
