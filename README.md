@@ -15,11 +15,15 @@ An Rest API using Spring Boot stack. The objective is expose some Rest services.
 ## Usage
 - The people data can be recovered by GET request in endpoint: [http://localhost:8080/api/v1/people](http://localhost:8080/api/v1/people)
 - The people prize data can be recovered by GET request in endpoint: [http://localhost:8080/api/v1/people/prize](http://localhost:8080/api/v1/people/prize)
+
 ## Supported Versions
 We recommend that you use:
  - Java >= 8
  - Gradle >= 3.0
  - Docker >= 17.09.0-ce
+ 
+## Documentation
+Access Swagger in [http://localhost:8080](http://localhost:8080)
      
 ## License
 It is free software, and may be redistributed.
