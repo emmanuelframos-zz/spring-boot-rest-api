@@ -19,8 +19,8 @@ public final class PeopleUtils {
         List<PeopleResource> people = new ArrayList();
 
         people.add(PeopleResource.build()
-                .login("mvidolin")
-                .name("Marcos Vidolin")
+                .login("jdoe")
+                .name("John Doe")
                 .age(27)
                 .birthDate("1989-05-11")
                 .photoUrl("")
@@ -30,8 +30,8 @@ public final class PeopleUtils {
         );
 
         people.add(PeopleResource.build()
-                .login("josef")
-                .name("José Reinaldo")
+                .login("cdoe")
+                .name("Cris Doe")
                 .age(29)
                 .birthDate("1987-10-13")
                 .photoUrl("")
@@ -41,8 +41,8 @@ public final class PeopleUtils {
         );
 
         people.add(PeopleResource.build()
-                .login("emmanuelf")
-                .name("Emmanuel Ramos")
+                .login("tdoe")
+                .name("Tyler Doe")
                 .age(31)
                 .birthDate("1985-11-29")
                 .photoUrl("")
@@ -52,8 +52,8 @@ public final class PeopleUtils {
         );
 
         people.add(PeopleResource.build()
-                .login("luizsj")
-                .name("Luiz Souza")
+                .login("ldoe")
+                .name("Louis Doe")
                 .age(24)
                 .birthDate("1992-09-05")
                 .photoUrl("")
@@ -63,8 +63,8 @@ public final class PeopleUtils {
         );
 
         people.add(PeopleResource.build()
-                .login("alan")
-                .name("Alan Thiago")
+                .login("adoe")
+                .name("Alan Doe")
                 .age(31)
                 .birthDate("1985-09-23")
                 .photoUrl("")
@@ -74,8 +74,8 @@ public final class PeopleUtils {
         );
 
         people.add(PeopleResource.build()
-                .login("gilbertopj")
-                .name("Gilberto Prado")
+                .login("gdoe")
+                .name("Gilbert Doe")
                 .age(27)
                 .birthDate("1988-09-23")
                 .photoUrl("")
@@ -85,8 +85,8 @@ public final class PeopleUtils {
         );
 
         people.add(PeopleResource.build()
-                .login("rbastos")
-                .name("Ricardo Bastos")
+                .login("rdoe")
+                .name("Richard Doe")
                 .age(27)
                 .birthDate("1988-02-23")
                 .photoUrl("")
@@ -96,89 +96,12 @@ public final class PeopleUtils {
         );
 
         people.add(PeopleResource.build()
-                .login("cperes")
-                .name("Caio Peres")
+                .login("mdoe")
+                .name("Mark Doe")
                 .age(36)
                 .birthDate("1980-04-08")
                 .photoUrl("")
                 .salary(8000.18)
-                .productivityMonths(ProductivityUtils.getProductivityMonths())
-                .productivityAverage()
-        );
-
-        people.add(PeopleResource.build()
-                .login("amandac")
-                .name("Amanda Dianni")
-                .age(35)
-                .birthDate("1981-04-08")
-                .photoUrl("")
-                .salary(6300.28)
-                .productivityMonths(ProductivityUtils.getProductivityMonths())
-                .productivityAverage()
-        );
-
-        people.add(PeopleResource.build()
-                .login("ederson")
-                .name("Ederson Andrey")
-                .age(31)
-                .birthDate("1985-04-08")
-                .photoUrl("")
-                .salary(9000.34)
-                .productivityMonths(ProductivityUtils.getProductivityMonths())
-                .productivityAverage()
-        );
-
-        people.add(PeopleResource.build()
-                .login("gtrevisan")
-                .name("Getulio Trevisan")
-                .age(34)
-                .birthDate("1982-04-08")
-                .photoUrl("")
-                .salary(4600.67)
-                .productivityMonths(ProductivityUtils.getProductivityMonths())
-                .productivityAverage()
-        );
-
-        people.add(PeopleResource.build()
-                .login("vnogueira")
-                .name("Vinicius Nogueira")
-                .age(33)
-                .birthDate("1983-04-08")
-                .photoUrl("")
-                .salary(3800.00)
-                .productivityMonths(ProductivityUtils.getProductivityMonths())
-                .productivityAverage()
-        );
-
-        people.add(PeopleResource.build()
-                .login("mpellini")
-                .name("Marcos Pellini")
-                .age(32)
-                .birthDate("1984-04-08")
-                .photoUrl("")
-                .salary(10000.00)
-                .productivityMonths(ProductivityUtils.getProductivityMonths())
-                .productivityAverage()
-        );
-
-        people.add(PeopleResource.build()
-                .login("vpfeifer")
-                .name("Vinicius Pfeifer")
-                .age(30)
-                .birthDate("1986-04-08")
-                .photoUrl("")
-                .salary(6666.66)
-                .productivityMonths(ProductivityUtils.getProductivityMonths())
-                .productivityAverage()
-        );
-
-        people.add(PeopleResource.build()
-                .login("rodolpho")
-                .name("Rodolpho Neto")
-                .age(22)
-                .birthDate("1994-04-08")
-                .photoUrl("")
-                .salary(15000.00)
                 .productivityMonths(ProductivityUtils.getProductivityMonths())
                 .productivityAverage()
         );
