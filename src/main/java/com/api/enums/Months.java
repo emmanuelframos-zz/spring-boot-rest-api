@@ -1,7 +1,8 @@
 package com.api.enums;
 
+/** Last Year's Quarter **/
 public enum Months {
-    SEP,
     OCT,
-    NOV
+    NOV,
+    DEC
 }
