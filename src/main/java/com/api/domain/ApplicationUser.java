@@ -9,9 +9,9 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class User {
+public class ApplicationUser {
 
-    public User(){}
+    public ApplicationUser(){}
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

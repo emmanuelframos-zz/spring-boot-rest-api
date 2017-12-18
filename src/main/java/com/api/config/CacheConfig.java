@@ -41,8 +41,6 @@ public class CacheConfig {
 
     @Bean
     public JedisPool jedisPool() {
-        return new JedisPool(buildPoolConfig(),
-                redisHost, redisPort, redisTimeout,
-                StringUtils.isEmpty(redisPassword) ? null : redisPassword);
+        return new JedisPool(buildPoolConfig(), redisHost, redisPort, redisTimeout, StringUtils.isEmpty(redisPassword) ? null : redisPassword);
     }
 }

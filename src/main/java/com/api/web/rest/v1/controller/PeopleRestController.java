@@ -16,8 +16,11 @@ public class PeopleRestController extends BaseRestController {
 
     private static Logger logger = LoggerFactory.getLogger(PeopleRestController.class);
 
-    @Autowired
     private APIConfig apiConfig;
+
+    public PeopleRestController(APIConfig apiConfig){
+        this.apiConfig = apiConfig;
+    }
 
     @GetMapping(value = "/people")
     public List<PeopleResource> getPeople() {

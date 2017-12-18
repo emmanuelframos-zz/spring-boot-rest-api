@@ -5,9 +5,10 @@ import lombok.Data;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class UserResource {
+public class ApplicationUserResource {
 
     private String username;
 
     private String password;
+
 }

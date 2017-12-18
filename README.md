@@ -13,8 +13,26 @@ An Rest API using Spring Boot stack. The objective is expose some Rest services.
 3. To run in local JVM execute: **run-local-jvm.sh** file
 
 ## Usage
-- The people data can be recovered by GET request in endpoint: [http://localhost:8080/api/v1/people](http://localhost:8080/api/v1/people)
-- The people prize data can be recovered by GET request in endpoint: [http://localhost:8080/api/v1/people/prize](http://localhost:8080/api/v1/people/prize)
+
+We have to register an user to access services:
+~~~~
+curl -H "Content-Type: application/json" -X POST -d '{"username": "admin", "password": "p4ssw0rd"}' http://localhost:8080/api/v1/users/register -v
+~~~~
+
+After user registered, we must have the access granted using auth method, a JWT token will be returned if user credentials is ok: 
+~~~~  
+curl -i -H "Content-Type: application/json" -X POST -d '{"username": "admin", "password": "p4ssw0rd"}' http://localhost:8080/api/v1/users/auth -v
+~~~~
+
+With token, we can access protected endpoints, as people listing service:
+~~~~  
+curl -H "Content-Type: application/json" -H "Authorization: Bearer [TOKEN RETURNED]" http://localhost:8080/api/v1/people -v
+~~~~
+
+And people prize listing service:
+~~~~  
+curl -H "Content-Type: application/json" -H "Authorization: Bearer [TOKEN RETURNED]" http://localhost:8080/api/v1/people/prize -v
+~~~~  
 
 ## Supported Versions
 We recommend that you use:

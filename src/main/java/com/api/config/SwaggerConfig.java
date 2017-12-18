@@ -22,6 +22,8 @@ import java.time.LocalDate;
 @Profile("!prd")
 public class SwaggerConfig {
 
+    public final static String[] SWAGGER_RESOURCES = {"/", "/swagger-ui.html", "/webjars/springfox-swagger-ui/**", "/swagger-resources/**", "/v2/api-docs"};
+
     @Bean
     public Docket mainConfig() {
         return new Docket(DocumentationType.SWAGGER_2)
