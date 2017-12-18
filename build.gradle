@@ -37,6 +37,7 @@ dependencies {
 
     /** Database **/
     compile "com.h2database:h2:1.4.196"
+    compile "redis.clients:jedis:2.9.0"
 
     /** Utils **/
     compile "org.projectlombok:lombok:1.16.10"
