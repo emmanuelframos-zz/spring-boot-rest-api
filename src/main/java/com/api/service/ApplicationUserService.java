@@ -1,6 +1,7 @@
 package com.api.service;
 
 import com.api.domain.ApplicationUser;
+import com.api.enums.ExceptionMessages;
 import com.api.repository.ApplicationUserRepository;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -8,9 +9,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import static java.util.Collections.emptyList;
 
 import java.util.List;
+
+import static java.util.Collections.emptyList;
 
 @Service
 public class ApplicationUserService implements UserDetailsService {
@@ -35,10 +37,8 @@ public class ApplicationUserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        ApplicationUser applicationUser = applicationUserRepository.findByUsername(username);
-        if (applicationUser == null) {
-            throw new UsernameNotFoundException("User not found: ".concat(username));
-        }
-        return new User(applicationUser.getUsername(), applicationUser.getPassword(), emptyList());
+        return applicationUserRepository.findByUsername(username)
+                .map((user)->new User(user.getUsername(), user.getPassword(), emptyList()))
+                .orElseThrow(()-> new UsernameNotFoundException(ExceptionMessages.USER_NOT_FOUND.getMessage()));
     }
 }
