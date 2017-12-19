@@ -21,13 +21,13 @@ public class ApplicationUserRestController extends BaseRestController {
     }
 
     @GetMapping("/users")
-    public @ResponseBody List<ApplicationUserResource> getAllUsers() {
+    public List<ApplicationUserResource> getAllUsers() {
         List<ApplicationUser> applicationUsers = applicationUserService.getAllUsers();
         return applicationUserParser.toResourceList(applicationUsers);
     }
 
     @PostMapping("/users/register")
-    public void register(@RequestBody ApplicationUserResource applicationUserResource) {
+    public void register(ApplicationUserResource applicationUserResource) {
         applicationUserService.register(applicationUserParser.toDomain(applicationUserResource));
     }
 }
