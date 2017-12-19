@@ -1,12 +1,12 @@
 package com.api.utils;
 
-import com.api.web.rest.v1.resource.PeopleResource;
+import com.api.web.rest.v1.resource.CustomerResource;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public final class PeopleUtils {
+public final class CustomerUtils {
 
     private static String[] lowPrizeArray    = {"Pacote de Bala Yogurte 100", "Um beijo da Débora", "Coleção Bíblia Em Aúdio Cid Moreira", "Discografia em K7 Molejão + Raça Negra", "Fardão Dolly 2L"};
     private static String[] mediumPrizeArray = {"1000ão de Crédito na 25 de Março", "Coleção Jaspion em VHS", "Uno Zerinho", "Coleção da Playboy", "Air Fryer"};
@@ -14,11 +14,11 @@ public final class PeopleUtils {
 
     private static Random random = new Random();
 
-    public static List<PeopleResource> getPeople(){
+    public static List<CustomerResource> getCustomers(){
 
-        List<PeopleResource> people = new ArrayList();
+        List<CustomerResource> customers = new ArrayList();
 
-        people.add(PeopleResource.build()
+        customers.add(CustomerResource.build()
                 .login("jdoe")
                 .name("John Doe")
                 .age(27)
@@ -29,7 +29,7 @@ public final class PeopleUtils {
                 .productivityAverage()
         );
 
-        people.add(PeopleResource.build()
+        customers.add(CustomerResource.build()
                 .login("cdoe")
                 .name("Cris Doe")
                 .age(29)
@@ -40,7 +40,7 @@ public final class PeopleUtils {
                 .productivityAverage()
         );
 
-        people.add(PeopleResource.build()
+        customers.add(CustomerResource.build()
                 .login("tdoe")
                 .name("Tyler Doe")
                 .age(31)
@@ -51,7 +51,7 @@ public final class PeopleUtils {
                 .productivityAverage()
         );
 
-        people.add(PeopleResource.build()
+        customers.add(CustomerResource.build()
                 .login("ldoe")
                 .name("Louis Doe")
                 .age(24)
@@ -62,7 +62,7 @@ public final class PeopleUtils {
                 .productivityAverage()
         );
 
-        people.add(PeopleResource.build()
+        customers.add(CustomerResource.build()
                 .login("adoe")
                 .name("Alan Doe")
                 .age(31)
@@ -73,7 +73,7 @@ public final class PeopleUtils {
                 .productivityAverage()
         );
 
-        people.add(PeopleResource.build()
+        customers.add(CustomerResource.build()
                 .login("gdoe")
                 .name("Gilbert Doe")
                 .age(27)
@@ -84,7 +84,7 @@ public final class PeopleUtils {
                 .productivityAverage()
         );
 
-        people.add(PeopleResource.build()
+        customers.add(CustomerResource.build()
                 .login("rdoe")
                 .name("Richard Doe")
                 .age(27)
@@ -95,7 +95,7 @@ public final class PeopleUtils {
                 .productivityAverage()
         );
 
-        people.add(PeopleResource.build()
+        customers.add(CustomerResource.build()
                 .login("mdoe")
                 .name("Mark Doe")
                 .age(36)
@@ -106,17 +106,17 @@ public final class PeopleUtils {
                 .productivityAverage()
         );
 
-        return people;
+        return customers;
     }
 
-    public static List<PeopleResource> getPeoplePrize(){
-        List<PeopleResource> people = getPeople();
+    public static List<CustomerResource> getCustomersPrize(){
+        List<CustomerResource> customers = getCustomers();
 
-        people.stream().forEach((person)-> {
-            person.prize(getPrize(person.getProductivityAverage()));
+        customers.stream().forEach((customer)-> {
+            customer.prize(getPrize(customer.getProductivityAverage()));
         });
 
-        return people;
+        return customers;
     }
 
     private static String getPrize(Double productivityAverage){

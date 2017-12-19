@@ -10,7 +10,7 @@ import java.util.List;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class PeopleResource {
+public class CustomerResource {
 
     @Setter(AccessLevel.NONE)
     private String login;
@@ -39,46 +39,46 @@ public class PeopleResource {
     @Setter(AccessLevel.NONE)
     private String prize;
 
-    private PeopleResource(){ }
+    private CustomerResource(){ }
 
-    public static PeopleResource build(){return new PeopleResource();}
+    public static CustomerResource build(){return new CustomerResource();}
 
-    public PeopleResource login(String login){
+    public CustomerResource login(String login){
         this.login = login;
         return this;
     }
 
-    public PeopleResource name(String name){
+    public CustomerResource name(String name){
         this.name = name;
         return this;
     }
 
-    public PeopleResource age(Integer age){
+    public CustomerResource age(Integer age){
         this.age = age;
         return this;
     }
 
-    public PeopleResource birthDate(String birthDate){
+    public CustomerResource birthDate(String birthDate){
         this.birthDate = birthDate;
         return this;
     }
 
-    public PeopleResource photoUrl(String photoUrl){
+    public CustomerResource photoUrl(String photoUrl){
         this.photoUrl = photoUrl;
         return this;
     }
 
-    public PeopleResource salary(Double salary){
+    public CustomerResource salary(Double salary){
         this.salary = salary;
         return this;
     }
 
-    public PeopleResource productivityMonths(List<ProductivityMonth> productivityMonths){
+    public CustomerResource productivityMonths(List<ProductivityMonth> productivityMonths){
         this.productivityMonths = productivityMonths;
         return this;
     }
 
-    public PeopleResource productivityAverage(){
+    public CustomerResource productivityAverage(){
         this.productivityAverage = (productivityMonths.stream().mapToDouble( month -> month.getValue()).sum() / productivityMonths.size());
         return this;
     }
@@ -87,7 +87,7 @@ public class PeopleResource {
         return this.productivityAverage;
     }
 
-    public PeopleResource prize(String prize){
+    public CustomerResource prize(String prize){
         this.prize = prize;
         return this;
     }

@@ -9,11 +9,11 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class People {
+public class Customer {
 
-    public People(){}
+    public Customer(){}
 
-    public People(String firstName, String lastName) {
+    public Customer(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
