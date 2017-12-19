@@ -27,7 +27,7 @@ public class ApplicationUserRestController extends BaseRestController {
     }
 
     @PostMapping("/users/register")
-    public void register(ApplicationUserResource applicationUserResource) {
+    public void register(@RequestBody ApplicationUserResource applicationUserResource) {
         applicationUserService.register(applicationUserParser.toDomain(applicationUserResource));
     }
 }
