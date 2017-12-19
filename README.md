@@ -24,14 +24,14 @@ After user registered, we must have the access granted using auth method, a JWT 
 curl -i -H "Content-Type: application/json" -X POST -d '{"username": "admin", "password": "p4ssw0rd"}' http://localhost:8080/api/v1/users/auth -v
 ~~~~
 
-With token, we can access protected endpoints, as people listing service:
+With token, we can access protected endpoints, as customer listing service:
 ~~~~  
-curl -H "Content-Type: application/json" -H "Authorization: Bearer [TOKEN RETURNED]" http://localhost:8080/api/v1/people -v
+curl -H "Content-Type: application/json" -H "Authorization: Bearer [TOKEN RETURNED]" http://localhost:8080/api/v1/customers -v
 ~~~~
 
-And people prize listing service:
+And customer's prize listing service:
 ~~~~  
-curl -H "Content-Type: application/json" -H "Authorization: Bearer [TOKEN RETURNED]" http://localhost:8080/api/v1/people/prize -v
+curl -H "Content-Type: application/json" -H "Authorization: Bearer [TOKEN RETURNED]" http://localhost:8080/api/v1/customers/prize -v
 ~~~~  
 
 ## Supported Versions
