@@ -23,6 +23,7 @@ dependencies {
     /** Spring Boot Stack **/
     def springBootVersion = '1.5.9.RELEASE'
     compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}"
     compile ("org.springframework.boot:spring-boot-starter-undertow:${springBootVersion}"){
         exclude group: 'io.undertow', module: 'undertow-websockets-jsr'
     }

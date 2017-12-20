@@ -10,7 +10,7 @@ import redis.clients.jedis.JedisPoolConfig;
 import java.time.Duration;
 
 @Configuration
-public class CacheConfig {
+public class RedisConfig {
 
     @Value("${redis.host}")
     private String redisHost;

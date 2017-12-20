@@ -9,6 +9,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -30,11 +32,13 @@ public class ApplicationUserService implements UserDetailsService {
         return applicationUserRepository.findAll();
     }
 
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void register(ApplicationUser applicationUser) {
         applicationUser.setPassword(bCryptPasswordEncoder.encode(applicationUser.getPassword()));
         applicationUserRepository.save(applicationUser);
     }
 
+    @Transactional(readOnly = true)
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return applicationUserRepository.findByUsername(username)

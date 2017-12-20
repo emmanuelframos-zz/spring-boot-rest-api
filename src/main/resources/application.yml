@@ -1,3 +1,7 @@
+management:
+  security:
+    enabled: false
+
 rest:
   api:
     name: 'Spring Boot Rest Api'
@@ -8,3 +12,6 @@ redis:
   user:
   password:
   timeout: 60
+
+metrics:
+  endpoint: http://localhost:8080/metrics

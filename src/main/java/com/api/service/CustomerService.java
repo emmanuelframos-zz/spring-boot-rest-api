@@ -3,6 +3,7 @@ package com.api.service;
 import com.api.domain.Customer;
 import com.api.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class CustomerService {
         this.customerRepository = customerRepository;
     }
 
+    @Transactional(readOnly = true)
     public List<Customer> findByLastName(String lastName){
         return customerRepository.findByLastName(lastName);
     }

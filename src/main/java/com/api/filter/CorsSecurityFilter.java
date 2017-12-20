@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Component
-public class CorsFilter extends OncePerRequestFilter {
+public class CorsSecurityFilter extends OncePerRequestFilter {
 
     @Override
     public void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
