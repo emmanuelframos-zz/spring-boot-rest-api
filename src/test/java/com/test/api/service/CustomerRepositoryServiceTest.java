@@ -23,7 +23,7 @@ public class CustomerRepositoryServiceTest extends BusinessLayerTestBase {
     private CustomerRepository customerRepositoryMock;
 
     @Test
-    public void testConvertIsSameCurrency() throws Exception {
+    public void testFindByLastName() throws Exception {
         Customer dummy = new Customer();
         dummy.setId(1L);
         dummy.setFirstName("dummy first name");
