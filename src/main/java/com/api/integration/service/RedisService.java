@@ -23,7 +23,6 @@ public class RedisService {
         }
     }
 
-    @Async
     public void put(String key, String value) {
         try (Jedis jedis = jedisPool.getResource()) {
             jedis.set(key, value);

@@ -18,9 +18,6 @@ public class RedisConfig {
     @Value("${redis.port}")
     private Integer redisPort;
 
-    @Value("${redis.timeout}")
-    private Integer redisTimeout;
-
     @Value("${redis.password}")
     private String redisPassword;
 
@@ -41,6 +38,6 @@ public class RedisConfig {
 
     @Bean
     public JedisPool jedisPool() {
-        return new JedisPool(buildPoolConfig(), redisHost, redisPort, redisTimeout, StringUtils.isEmpty(redisPassword) ? null : redisPassword);
+        return new JedisPool(buildPoolConfig(), redisHost, redisPort, 60, StringUtils.isEmpty(redisPassword) ? null : redisPassword);
     }
 }

@@ -6,11 +6,11 @@ An Rest API using Spring Boot stack. The objective is expose some Rest services.
 ## Installing dependencies
 - [Install](http://www.oracle.com/technetwork/java/javase/downloads/index.html) Java
 - [Install](https://docs.docker.com/engine/installation/) Docker
+- [Install](https://docs.docker.com/compose/install/) Docker Compose
 
 ## Running application
 1. Access application root directory
 2. To run inside a **docker container** execute: **run-in-docker.sh** file
-3. To run in local JVM execute: **run-local-jvm.sh** file
 
 ## Usage
 
@@ -39,6 +39,7 @@ We recommend that you use:
  - Java >= 8
  - Gradle >= 3.0
  - Docker >= 17.09.0-ce
+ - Docker Compose >= 1.17.0
  
 ## API Documentation
 Access Swagger in [http://localhost:8080](http://localhost:8080)

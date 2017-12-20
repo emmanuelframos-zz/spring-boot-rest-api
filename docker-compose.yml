@@ -1,6 +1,10 @@
 version: '3.3'
 services:
+  spring-boot-rest-api:
+      build: .
+      ports:
+        - '8080:8080'
   redis:
-      image: redis:alpine
+      image: redis
       ports:
         - '6379:6379'

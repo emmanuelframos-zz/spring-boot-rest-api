@@ -7,11 +7,10 @@ rest:
     name: 'Spring Boot Rest Api'
 
 redis:
-  host: localhost
+  host: redis
   port: 6379
   user:
   password:
-  timeout: 60
 
 metrics:
-  endpoint: http://localhost:8080/metrics
+  endpoint: http://spring-boot-rest-api:8080/metrics
